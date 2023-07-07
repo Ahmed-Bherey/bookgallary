@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #F65D4E;
+    --black: #000000;
+    --light: #999999;
+    --white: #f6f6f6;
+    --footer: #282828;
+}
+
+header {
+    margin: 15px 0;
+}
+
+header .row .logo svg {
+    color: var(--main-color);
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header .row .logo {
+    font-size: 30px;
+}
+
+header .search .search_icon {
+    position: absolute;
+    top: 7px;
+    right: 30px;
+}
+
+header .search input {
+    width: 100%;
+    height: 38px;
+    border-radius: 10px;
+    border-color: #f6f6f6;
+    background: #f6f6f6;
+    border: none;
+    padding-left: 10px;
+}
+
+header .social {
+    text-align: right;
+    justify-content: flex-end;
+}
+
+header .social .social_icon {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header .social .social_icon:hover {
+    color: var(--main-color);
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+    font-family: inherit;
+    margin: 0 7px;
+}
+
+header ul li a:hover {
+    color: var(--main-color);
+}
+
+header nav ul li ul {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px 0px grey;
+    z-index: 2;
+}
+
+header nav ul li ul li {
+    /* min-width: 100px; */
+    margin: 7px 0;
+    display: none;
+}
+
+header nav ul li ul li a {
+    font-family: initial;
+}
+
+header nav ul li:hover ul li {
+    display: block;
+}
+
+.banner,
+.bestselling,
+.trending,
+.comments,
+.categories,
+.information {
+    margin: 50px 0;
+}
+
+.banner .banner_img {
+    background-image: url(../img/cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.banner .banner_img .banner_content {
+    position: absolute;
+    right: 15px;
+    top: 40%;
+}
+
+.banner .banner_img .banner_content h1 {
+    font-size: 50px;
+}
+
+.bestselling .bestselling_box .box_content img,
+.trending .swiper-slide .trending_box .img img,
+.sub_book .sub_book_img img {
+    max-width: 100%;
+}
+.trending .trending_box .img img,
+.sub_book .sub_book_img img{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.bestselling .bestselling_box .box_content .img_data .stars div,
+.trending .trending_box .book_info .stars div,
+.sub_book .sub_book_content .stars div {
+    display: inline-block;
+}
+
+.bestselling .bestselling_box .box_content .img_data .stars div svg,
+.trending .trending_box .book_info .stars div svg,
+.sub_book .sub_book_content .stars div svg {
+    color: #ff6900;
+    font-size: 14px;
+}
+.trending .trending_box .book_info h3 a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+}
+
+.bestselling .bestselling_box .box_content .img_data {
+    padding: 5px 7px;
+}
+
+.bestselling .bestselling_box .box_content {
+    box-shadow: 1px 1px 4px 1px grey;
+}
+
+.comments {
+    background-image: url(../img/commentsBanner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.comments .comments_content {
+    position: absolute;
+    padding: 50px;
+    bottom: 0;
+    left: 10%;
+    background-color: #f6f6f6;
+    width: 40%;
+    border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+}
+
+.comments .comments_content h5,
+.comments .comments_content .auther_info .address {
+    color: var(--light);
+    position: relative;
+}
+
+.comments .comments_content h5::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: var(--main-color);
+    margin: 0 auto;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+}
+
+.comments .comments_content .auther_info {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.categories .category_box .box_content .category_img img {
+    max-width: 100%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.categories .category_box .box_content h4.category_title {
+    top: 75%;
+    left: 15%;
+    color: var(--white);
+}
+
+.information .books_box .box_content,
+.information .cart_box .box_content,
+.information .emoji_box .box_content {
+    border: 1px solid var(--light);
+    padding: 25px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.information .books_box .box_content .icon {
+    background-color: #edebfc;
+    color: #7261d4;
+}
+
+.information .cart_box .box_content .icon {
+    background-color: #e8f6e1;
+    color: #72c949;
+}
+
+.information .emoji_box .box_content .icon {
+    background-color: #fbf1e6;
+    color: #fa8c17;
+}
+
+.information .books_box .box_content .icon,
+.information .cart_box .box_content .icon,
+.information .emoji_box .box_content .icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 36px;
+    text-align: center;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: .7s ease-in-out;
+    -webkit-transition: .7s ease-in-out;
+    -moz-transition: .7s ease-in-out;
+    -ms-transition: .7s ease-in-out;
+    -o-transition: .7s ease-in-out;
+}
+
+.information .books_box .box_content .icon:hover,
+.information .cart_box .box_content .icon:hover,
+.information .emoji_box .box_content .icon:hover,
+footer .footer_content .book_gallary .social_media .icon:hover{
+    transform: rotatey(360deg);
+    -webkit-transform: rotatey(360deg);
+    -moz-transform: rotatey(360deg);
+    -ms-transform: rotatey(360deg);
+    -o-transform: rotatey(360deg);
+}
+.information .title{
+    color: var(--light);
+    font-weight: 400;
+}
+
+footer{
+    background-color: var(--footer);
+    padding: 25px 0;
+}
+footer .footer_content .book_gallary .title .title_icon{
+    color: var(--main-color);
+    font-size: 26px;
+}
+footer .footer_content .book_gallary .title h3,
+footer .footer_content .contact .title h3,
+footer .footer_content .explore .title h3,
+footer .footer_content .categories_show .title h3{
+    color: var(--white);
+}
+footer .footer_content .book_gallary .address{
+    color: var(--light);
+    margin: 35px 0;
+}
+footer .footer_content .book_gallary .social_media .icon a,
+.trending .row .book_info .story{
+    color: var(--light);
+}
+footer .footer_content .book_gallary .social_media .icon a:hover,
+footer .footer_content .categories_show nav ul li a:hover,
+footer .footer_content .explore nav ul li a:hover,
+.trending .trending_box .book_info h3 a:hover{
+    color: var(--main-color);
+}
+footer .footer_content .book_gallary .social_media .icon{
+    display: inline-block;
+    margin-right: 25px;
+    transition: .7s ease-in-out;
+    -webkit-transition: .7s ease-in-out;
+    -moz-transition: .7s ease-in-out;
+    -ms-transition: .7s ease-in-out;
+    -o-transition: .7s ease-in-out;
+}
+footer .footer_content .contact .tel_nummber{
+    font-size: 30px;
+    color: var(--main-color);
+}
+footer .footer_content .contact .email{
+    color: var(--white);
+    font-size: 20px;
+}
+footer .footer_content .book_gallary .social_media .icon a,
+footer .footer_content .contact .tel_nummber{
+    margin: 35px 0;
+}
+footer .footer_content .explore nav ul li,
+footer .footer_content .categories_show nav ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+footer .footer_content .explore nav ul li a,
+footer .footer_content .categories_show nav ul li a,
+footer hr{
+    text-decoration: none;
+    color: var(--light);
+}
+footer .copyright span a{
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 400;
+}
+.sub_book{
+    margin: 50px 0;
+}
